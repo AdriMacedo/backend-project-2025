@@ -5,7 +5,6 @@ import roleMiddleware from "../middleware/roleMiddleware";
 
 const router = Router();
 
-
 // rotas só para admin
 router.use(authMiddleware);
 router.use(roleMiddleware("admin"));

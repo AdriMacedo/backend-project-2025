@@ -5,7 +5,7 @@ import roleMiddleware from "../middleware/roleMiddleware";
 
 const router = Router();
 
-// rotas portegidas so para autenticados
+// rotas protegidas so para autenticados
 router.get("/", authMiddleware, movieController.getAllMovies);
 router.get("/search", authMiddleware, movieController.searchMovies);
 
