@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import authRoute from "./routes/authRoute";
+import userRouter from './routes/userRouter';
+import movieRouter from './routes/movieRouter';
 
 dotenv.config();
 
@@ -14,7 +16,12 @@ const MONGO_URI = process.env.MONGO_URI || "";
 
 // The data format (JSON)
 app.use(express.json());
-app.use("/auth", authRoute);
+
+
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRouter);
+app.use("/api/movies", movieRouter);
+
 // app.use(fileUpload());
 
 // //rota inicial
