@@ -5,11 +5,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AdriMacedo/backend-project-2025.git"
+    "url": "git+https://github.com/AdriMacedo/Backend_Movie-API.git"
   },
   "scripts": {
     "start": "npm run build && node dist/main",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts",
+    "dev": "node -r dotenv/config -r ts-node/register ./src/main.ts",
     "lint": "npx eslint ./src"
   },
   "keywords": [],
@@ -17,13 +17,14 @@
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/AdriMacedo/backend-project-2025/issues"
+    "url": "https://github.com/AdriMacedo/Backend_Movie-API/issues"
   },
-  "homepage": "https://github.com/AdriMacedo/backend-project-2025#readme",
+  "homepage": "https://github.com/AdriMacedo/Backend_Movie-API#readme",
   "devDependencies": {
     "@eslint/js": "^9.28.0",
     "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.3",
+    "@types/express-fileupload": "^1.5.1",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.15.30",
     "@typescript-eslint/eslint-plugin": "^8.34.0",
@@ -41,6 +42,7 @@
     "bcrypt": "^6.0.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "express-fileupload": "^1.5.1",
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1"

@@ -1,17 +1,9 @@
-import { NextFunction, Router, Request, Response } from "express";
+import { Router } from "express";
 import { login, registerUser } from "../controllers/authController";
-import { check, validationResult } from "express-validator";
+import { check } from "express-validator";
+import { validate } from "../validators/validators";
 
 const router = Router();
-
-const validate = (req: Request, res: Response, next: NextFunction) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    res.status(400).json({ errors: errors.array() });
-    return;
-  }
-  next();
-};
 
 router.post(
   "/register",
@@ -21,6 +13,7 @@ router.post(
     check("name")
       .isLength({ min: 2, max: 100 })
       .withMessage("name should have ate least 2 chars"),
+    // check("role").not().exists().withMessage("role is not allowed"),
   ],
   validate,
   registerUser

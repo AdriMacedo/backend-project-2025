@@ -14,6 +14,7 @@ export const registerUser = async (
       return;
     }
 
+
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       res.status(400).json({ message: "email is already registered" });
@@ -22,10 +23,11 @@ export const registerUser = async (
 
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
+    console.log(hashedPassword);
 
     const newUser = new User({
       name,
-      email,
+      email: email.toLowerCase(),
       password: hashedPassword,
       role: "user",
     });
@@ -47,11 +49,19 @@ export const login = async (req: Request, res: Response): Promise<void> => {
     }
 
     const user = await User.findOne({ email });
+    console.log("user: ", user);
     if (!user) {
       res.status(400).json({ message: "invalid credentials" });
       return;
     }
+    console.log("Email recebido:", email);
+    console.log("Utilizador encontrado:", user);
+    console.log("Password recebida:", password);
+    console.log("Password na BD:", user.password);
+
     const isMatch = await bcrypt.compare(password, user.password);
+    console.log("Resultado do compare:", isMatch);
+
     if (!isMatch) {
       res.status(400).json({ message: "invalid credentials" });
       return;
@@ -62,7 +72,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       process.env.JWT_SECRET!,
       { expiresIn: "1h" }
     );
-    res.status(200).json({ token, message: "login sucessful" });
+    res.status(200).json({ token, message: "login successful" });
     return;
   } catch (error) {
     res.status(500).json({ message: "server error", error });
