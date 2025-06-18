@@ -13,7 +13,7 @@ router.post(
     check("name")
       .isLength({ min: 2, max: 100 })
       .withMessage("name should have ate least 2 chars"),
-    // check("role").not().exists().withMessage("role is not allowed"),
+    check("role").not().exists().withMessage("role is not allowed"),
   ],
   validate,
   registerUser

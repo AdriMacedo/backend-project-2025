@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "f2463ae2-630a-49f7-b382-2ea12eb3e5ed",
+		"name": "MOVIE-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43510728",
+		"_collection_link": "https://adrimace-1038650.postman.co/workspace/adrimace's-Workspace~6a1f5619-6c37-4349-81ff-8b1f1a11a3dd/collection/43510728-f2463ae2-630a-49f7-b382-2ea12eb3e5ed?action=share&source=collection_link&creator=43510728"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/api/movies",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODUwNTc0OWFhZjMxODE2NzQ4YjAxYWMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTAxMDY0OTgsImV4cCI6MTc1MDExMDA5OH0.oOw2XUjzbZbl93tKD0XhV4FPUHbhd4hSGktQ1Scoo2c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Top Gun",
+							"type": "text"
+						},
+						{
+							"key": "releaseDate",
+							"value": "2010-05-16",
+							"type": "text"
+						},
+						{
+							"key": "trailerLink",
+							"value": "https://www.youtube.com/watch?v=xa_z57UatDY",
+							"type": "text"
+						},
+						{
+							"key": "genres",
+							"value": "Action",
+							"type": "text"
+						},
+						{
+							"key": "genres",
+							"value": "Drama",
+							"type": "text"
+						},
+						{
+							"key": "genres",
+							"value": "Romance",
+							"type": "text"
+						},
+						{
+							"key": "genres",
+							"value": "Adventure",
+							"type": "text"
+						},
+						{
+							"key": "poster",
+							"type": "file",
+							"src": "postman-cloud:///1f04af94-3116-4150-ab19-4d17759909b9"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:4000/api/movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Top Gun",
+									"type": "text"
+								},
+								{
+									"key": "releaseDate",
+									"value": "2010-05-16",
+									"type": "text"
+								},
+								{
+									"key": "trailerLink",
+									"value": "https://www.youtube.com/watch?v=xa_z57UatDY",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "Action",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "Drama",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "Romance",
+									"type": "text"
+								},
+								{
+									"key": "genres",
+									"value": "Adventure",
+									"type": "text"
+								},
+								{
+									"key": "poster",
+									"type": "file",
+									"src": "postman-cloud:///1f04af94-3116-4150-ab19-4d17759909b9"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "758"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f6-HP3ZddxkYxhc4zyqek+LaESMrrE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Jun 2025 18:18:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"68508941ac5bd44baa006f9a\",\n        \"title\": \"Step Up 3D\",\n        \"releaseDate\": \"2010-08-06T00:00:00.000Z\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=Ee7V9sJv030\",\n        \"poster\": \"Step_up_3d_poster.jpg\",\n        \"genres\": [\n            \"Dança\",\n            \"Drama\",\n            \"Romance\",\n            \"Adventure\",\n            \"Comédia\"\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68508a21ac5bd44baa006f9e\",\n        \"title\": \"The North Shore\",\n        \"releaseDate\": \"1987-08-14T00:00:00.000Z\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=QxTjTGhQ9jY\",\n        \"poster\": \"North_shore_poster.jpg\",\n        \"genres\": [\n            \"Action\",\n            \"Drama\",\n            \"Romance\",\n            \"Sport\"\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"68508d36ac5bd44baa006fa2\",\n        \"title\": \"Top Gun\",\n        \"releaseDate\": \"2010-05-16T00:00:00.000Z\",\n        \"trailerLink\": \"https://www.youtube.com/watch?v=xa_z57UatDY\",\n        \"poster\": \"Top_Gun_Movie_poster.jpg\",\n        \"genres\": [\n            \"Action\",\n            \"Drama\",\n            \"Romance\",\n            \"Adventure\"\n        ],\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		}
+	]
+}

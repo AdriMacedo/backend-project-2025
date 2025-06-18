@@ -16,17 +16,19 @@
 ## Estrutura do projeto
 
 ```
-/static/posters         #imagens filmes
+/static/posters         # imagens filmes
+/postman                # postman collection para testar API
+/.env                   # variáveis de ambiente
 /src
-    /controllers        #lógica endpoints (auth,movies,users)
-    /middleware         #JWT e role middleware
-    /models             #esquemas Mongoose
-    /routes             #rotas express    
-    /models             #esquemas Mongoose
-    /services           #lógica de validacoes, DB
+    /controllers        # lógica endpoints (auth,movies,users)
+    /middleware         # JWT e role middleware
+    /models             # esquemas Mongoose
+    /routes             # rotas express    
+    /models             # esquemas Mongoose
+    /services           # lógica de validacoes, DB
     
-    /validator          #validacao 
-    /main.ts        #inicio da app
+    /validator          # validação 
+    /main.ts            # inicio da app
 ```
 
 ## API Endpoints
@@ -68,6 +70,13 @@
     }
 ]
 ```
+
+
+## coleccao postman
+
+inclui uma colecao Postman para teste da API
+
+
 ## repositório
 
 https://github.com/AdriMacedo/Backend_Movie-API.git
